@@ -2,8 +2,8 @@ name: Buscar vagas
 
 on:
   schedule:
-    # Toda segunda-feira às 8h de Brasília (11h UTC)
-    - cron: "0 11 * * 1"
+    # Todos os dias às 12h de Brasília (15h UTC, pois Brasília = UTC-3)
+    - cron: "0 15 * * *"
   # Permite rodar manualmente pela aba "Actions" no GitHub (para testar)
   workflow_dispatch:
 
