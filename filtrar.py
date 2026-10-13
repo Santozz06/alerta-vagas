@@ -38,6 +38,8 @@ PALAVRAS_AREA = [
 REGIOES_ACEITAS = [
     "novo hamburgo",
     "parobé", "parobe",
+    "taquara",
+    "igrejinha",
     "sao leopoldo", "são leopoldo",
     "sapucaia do sul", "sapucaia",
     "esteio",

@@ -48,6 +48,10 @@ URLS_BNE = [
     "https://www.bne.com.br/vagas-de-emprego-para-programador-em-novo-hamburgo-rs",
     # Parobé
     "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-parobe-rs",
+    # Taquara
+    "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-taquara-rs",
+    # Igrejinha
+    "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-igrejinha-rs",
     # São Leopoldo
     "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-sao-leopoldo-rs",
     # Sapucaia do Sul
