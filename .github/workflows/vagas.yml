@@ -1,0 +1,43 @@
+name: Buscar vagas
+
+on:
+  schedule:
+    # Toda segunda-feira às 8h de Brasília (11h UTC)
+    - cron: "0 11 * * 1"
+  # Permite rodar manualmente pela aba "Actions" no GitHub (para testar)
+  workflow_dispatch:
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write  # necessário para fazer git push do vistas.json
+
+    steps:
+      - name: Baixar o código do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Executar o script de vagas
+        run: python main.py
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+
+      - name: Salvar vistas.json no repositório
+        # Salva o histórico de vagas vistas para que a próxima execução
+        # não reenvie as mesmas vagas. Sem este passo o arquivo seria perdido.
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add alerta-vagas/vistas.json
+          git diff --staged --quiet || git commit -m "chore: atualiza vagas vistas [skip ci]"
+          git push
