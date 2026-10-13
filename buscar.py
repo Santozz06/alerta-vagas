@@ -43,9 +43,23 @@ def _get(url: str) -> BeautifulSoup | None:
 # URLs do BNE a serem raspadadas.
 # Adicione mais cidades ou termos de busca conforme precisar.
 URLS_BNE = [
+    # Novo Hamburgo
     "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-novo-hamburgo-rs",
     "https://www.bne.com.br/vagas-de-emprego-para-programador-em-novo-hamburgo-rs",
+    # Parobé
+    "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-parobe-rs",
+    # São Leopoldo
+    "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-sao-leopoldo-rs",
+    # Sapucaia do Sul
+    "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-sapucaia-do-sul-rs",
+    # Esteio
+    "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-esteio-rs",
+    # Canoas
+    "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-canoas-rs",
+    # Porto Alegre
     "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-em-porto-alegre-rs",
+    # Remoto (RS)
+    "https://www.bne.com.br/vagas-de-emprego-para-desenvolvedor-home-office",
 ]
 
 
