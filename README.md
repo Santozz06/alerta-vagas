@@ -74,7 +74,7 @@ python main.py
 
 4. Vá em **Actions → Buscar vagas → Run workflow** para testar
 
-O script roda automaticamente toda **segunda-feira às 8h (horário de Brasília)**.
+O script roda automaticamente todo **dia as 12h (horário de Brasília)**.
 
 ---
 
